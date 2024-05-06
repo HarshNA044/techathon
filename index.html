@@ -1,0 +1,161 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atma Ram Sanatan Dharma College</title>
+    <style>
+        body {
+            font-family: times;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            margin-top: 70px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            z-index: 100; 
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        div {
+            margin: 2.3%;
+        }
+        footer {
+    background: linear-gradient(to top, #4169f6, #ffd700);
+    color: black;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img width="75" align="left"
+            src="https://seeklogo.com/images/A/arsd-college-logo-35C65FCD3D-seeklogo.com.png">
+        <h5 style="margin: 0; text-align: left;"><b style="font-weight: bold; font-size: 14.5px;"><br>Atma Ram
+                Sanatan Dharma College</b></h5>
+        <h5 style="margin: 0; text-align: left;"><b style="font-weight: normal;">Dhaula Kuan, New Delhi<br>University
+                of Delhi</b></h5>
+
+    </nav>
+<div>
+    <br><br><br><br><br>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="B.A.">B.A.</option>
+                <option value="B.Sc.">B.Sc.</option>
+                <option value="B.Com.">B.Com.</option>
+            </select>
+
+            <label for="year">Year of Study:</label>
+            <input type="number" id="year" name="year" min="1" max="3" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div></div>
+    <footer style="padding: 4px; text-align: center; width: 100%; margin-left: auto; margin-right: auto;">
+    <p>&copy; 2024 Atma Ram Sanatan Dharma College</p>
+    <b><p>Developed by:</p></b>
+    <ul style="padding: 10px;">
+    <li style="display: inline; margin: 0 5px;">Harsh</li>
+    <li style="display: inline; margin: 0 5px;">Saksham Raj</li>
+    <li style="display: inline; margin: 0 5px;">Kavya</li>
+    <li style="display: inline; margin: 0 5px;">Hemant</li>
+    <li style="display: inline; margin: 0 5px;">Yogesh</li>
+</ul>
+</footer>
+</body>
+</html>
