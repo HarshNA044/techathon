@@ -156,55 +156,6 @@ footer ul li {
     <li style="display: inline; margin: 0 5px;">Hemant</li>
     <li style="display: inline; margin: 0 5px;">Yogesh</li>
 </ul>
-</footer>
-    <script>
-        async function sendMessageToTelegram(data) {
-    const token = "7366228257:AAGg2ZgeQpZS7EScGf1oXAx_r_2jGdOAMJA";
-    const chatId = 1002235260092;
-
-    const message = `
-        New Student Registration:
-        First Name: ${data.firstName}
-        Last Name: ${data.lastName}
-        Email: ${data.email}
-        Phone Number: ${data.phone}
-        Course: ${data.course}
-        Year of Study: ${data.year}
-        Gender: ${data.gender}
-        Date of Birth: ${data.dob}
-    `;
-
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
-    const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            chat_id: chatId,
-            text: message
-        })
-    });
-
-    if (response.ok) {
-        alert('Form submitted successfully!');
-    } else {
-        alert('Failed to submit the form. Please try again.');
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registrationForm');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-
-        sendMessageToTelegram(data);
-    });
-});
-    </script>
+    </footer>
 </body>
 </html>
