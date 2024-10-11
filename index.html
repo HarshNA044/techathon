@@ -28,28 +28,33 @@
             z-index: 1000;
         }
         ul {
-            background-color: #353935;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            overflow-x: auto;
-            white-space: nowrap;
-            max-width: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        ul li {
-            display: inline-block;
-            padding: 12px 25px;
-            margin-right: 15px;
-            background-color: #353935;
-            color: #fff;
-            border-radius: 5px;
-        }
-        ul li:last-child {
-            margin-right: 0;
-        }
+    background-color: #353935;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap;
+    max-width: 100%; /* Ensure it fits within the viewport */
+    padding: 0;
+    margin: 8px;
+    display: flex; /* Ensure list items stay in one row */
+}
+
+ul li {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-right: 15px;
+    background-color: #353935;
+    color: #fff;
+    border-radius: 5px;
+}
+
+ul li:last-child {
+    margin-right: 0;
+}
+
         div {
             color: #fff;
+            margin: 8px;
             text-align: justify;
             border-radius: 8px;
             padding: 10px 0;
@@ -104,30 +109,29 @@
             padding: 10px;
         }
 
-        /* Responsive Changes */
+       
         @media (max-width: 768px) {
-            header {
-                text-align: center;
-            }
-            ul {
-                display: flex;
-                justify-content: center;
-            }
-            ul li {
-                padding: 10px 15px;
-                margin-right: 10px;
-            }
-            .register h2 {
-                font-size: 1.5rem;
-            }
-        }
+    ul {
+        display: flex;
+        justify-content: space-around; /* Updated to ensure items align well */
+    }
+    ul li {
+        padding: 10px 15px;
+        margin-right: 10px;
+    }
+}
 
-        @media (max-width: 480px) {
-            ul li {
-                padding: 8px 10px;
-                font-size: 14px;
-                margin-right: 5px;
-            }
+@media (max-width: 480px) {
+    ul {
+        display: flex;
+        justify-content: center; /* Center list items */
+    }
+    ul li {
+        padding: 8px 10px;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+}
             .details div {
                 padding: 10px;
                 font-size: 14px;
@@ -155,7 +159,7 @@
 </head>
 <body>
     <header>
-        <img src="techathon.png" width=50 align="left" style="margin-left: 7%; margin-top: 0.8%;">
+        <img src="techathon.png" width=50 align="left" style="margin-left: 10px; margin-top: 12.5px;">
        <h2>Tech-A-Thon</h2>
        <h5>The Computer Science Society</h5>
     </header>
@@ -176,7 +180,7 @@
  This competition encourages creativity, innovation, and an in-depth understanding of AI trends. Open to all students, the event aims to spark interest in AI technologies and their impact on society. 
  All participants will receive <b>certificates</b> for their efforts, while the <b>1st, 2nd, and 3rd place</b> winners will be awarded <b>prize money</b> along with certificates.
     <br><br>Please check the details below for the event’s date, time, and venue.</p>
-    <center><button style='color: #fff; background-color: #353935; border-radius: 100px; font-size: 20px; padding: 15px;' onclick="alert('Registration will open soon!')">Register Now</button></center>
+    <center><button style='color: #fff; background-color: #353935; cursor: pointer; border: 0; border-radius: 100px; font-size: 20px; padding: 15px;' onclick="alert('Registration will open soon!')">Register Now</button></center>
     <div style="border-radius: 0; box-shadow: none;" class="details">
     <div>
         <h3>When</h3>
@@ -213,7 +217,7 @@
     <section style='margin-left: 0;' class="register">
     <h2>Get Ready to Reel It In!</h2>
     <p>Don't miss the chance to showcase your talent and win amazing prizes!</p>
-    <button style='color: #fff; background-color: #353935; border-radius: 100px; font-size: 20px; padding: 15px;' onclick="alert('Registration will open soon!')">Register Now</button>
+    <button style='color: #fff; background-color: #353935; border: 0; cursor: pointer; border-radius: 100px; font-size: 20px; padding: 15px;' onclick="alert('Registration will open soon!')">Register Now</button>
 </section>
 <footer>
     <p>Copyright &#169 Tech-A-Thon <script>document.write(new Date().getFullYear());</script></p>
