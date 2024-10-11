@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tech-A-Thon</title>
     <style>
         body {
@@ -10,6 +10,8 @@
             background-color: #f4f4f9;
             line-height: 1.6;
             z-index: 1;
+            margin: 0;
+            padding: 0;
         }
         header {
             color: #333;
@@ -23,6 +25,7 @@
             left: 0;
             line-height: 0.3;
             border: 1px solid #e1e1e1;
+            z-index: 1000;
         }
         ul {
             background-color: #353935;
@@ -30,7 +33,7 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             overflow-x: auto;
             white-space: nowrap;
-            max-width: auto;
+            max-width: 100%;
             padding: 0;
             margin: 0;
         }
@@ -45,15 +48,17 @@
         ul li:last-child {
             margin-right: 0;
         }
-    div {
-        color: #fff;
-        text-align: justify;
-        border-radius: 8px;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    .details {
+        div {
+            color: #fff;
+            text-align: justify;
+            border-radius: 8px;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .details {
             display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         .details div {
@@ -68,16 +73,19 @@
         }
 
         .prizes-list {
-                flex-direction: column;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .prizes-list div {
-                color: #333;
-                background-color: #e1e1e1;
-                width: 40%;
-                flex-direction: column;
-                margin: 0 350px;
-                padding: 10px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            color: #333;
+            background-color: #e1e1e1;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
         .register {
             padding: 15px 30px;
@@ -95,6 +103,8 @@
             color: #fff;
             padding: 10px;
         }
+
+        /* Responsive Changes */
         @media (max-width: 768px) {
             header {
                 text-align: center;
@@ -107,6 +117,9 @@
                 padding: 10px 15px;
                 margin-right: 10px;
             }
+            .register h2 {
+                font-size: 1.5rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -114,6 +127,28 @@
                 padding: 8px 10px;
                 font-size: 14px;
                 margin-right: 5px;
+            }
+            .details div {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .prizes-list div {
+                width: 80%;
+            }
+            .register {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+            .register h2 {
+                font-size: 1.4rem;
+            }
+            .register p {
+                margin-bottom: 15px;
+                font-size: 1rem;
+            }
+            .register button {
+                font-size: 1rem;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -187,5 +222,6 @@
         document.querySelector('.register button').addEventListener('click', function () {
             alert('Registration will open soon!');
         });
-    </script></body>
+    </script>
+</body>
 </html>
